@@ -1,0 +1,206 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #8b0000; /* Dark red for signatory theme */
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Allows sidebar scrolling */
+    z-index: 1000; /* Ensure the sidebar stays on top */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #a52a2a; /* Darker red for hover */
+}
+
+
+/* Main content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-container h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.account {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Filters */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-search {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+}
+
+.btn-green {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2b2b2b;
+}
+
+table thead {
+    background-color: #444;
+}
+
+table thead th {
+    padding: 12px;
+    font-size: 14px;
+    color: #bbb;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #333;
+}
+
+table tbody tr:hover {
+    background-color: #383838;
+}
+
+table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #fff;
+}
+
+table tbody td .save-note-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table tbody td .save-note-btn:hover {
+    background-color: #0056b3;
+}
+
+table tbody td .clear-status {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+table tbody td .change-status-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table tbody td .change-status-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Delete All Button */
+.controls .btn-delete {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls .btn-delete:hover {
+    background-color: #c9302c;
+}

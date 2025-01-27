@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, white, white); /* Subtle gradient for macOS feel */
+    overflow-x: hidden;
+}
+
+.sidebar .logo-image {
+    display: block;
+    margin: 0 auto 15px; /* Center logo and add spacing below */
+    width: 220px; /* Explicitly define the logo size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the logo fits within the defined space */
+}
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #800000, #5a0000); /* Gradient for depth */
+    color: white;
+    padding: 20px 15px;
+
+        flex-shrink: 0;
+    position: fixed;
+    width: 250px; /* Ensure the sidebar width remains fixed */
+    height: 100vh; /* Extend to full screen height */
+    overflow: hidden; /* Prevent content overflow */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white highlight */
+    transform: translateX(5px); /* Subtle motion effect */
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Logout Section */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sidebar-bottom a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    background: linear-gradient(to right, #a30000, #800000);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-bottom a:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right, #800000, #5a0000);
+}
+
+.sidebar-bottom p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Leave space for the sidebar */
+    padding: 20px; /* Ensure consistent spacing */
+    overflow: auto; /* Allow content to scroll if necessary */
+    width: calc(100% - 270px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px); /* macOS glass effect */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* macOS-like elevation */
+    
+}
+
+/* Cards Styling */
+.card {
+    width: 300px;
+    height: 70px;
+    background: #e6e6e6;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px #ffffff; /* Neumorphism-like effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px #ffffff;
+}
+
+/* Stats and Attendance Section */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.flex-item {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #800000;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+table td {
+    font-size: 14px;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to right, #800000, #a30000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #a30000, #800000);
+}
+
+#chartContainer {
+    height: 370px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.directory-section {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #800000;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

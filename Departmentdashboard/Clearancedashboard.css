@@ -1,0 +1,332 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #8b0000;
+    color: rgb(255, 255, 255);
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+/* Checkbox Styling */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    color: rgb(251, 251, 251);
+  }
+  
+  .checkbox input {
+    display: none;
+  }
+  
+  .checkbox .checkmark {
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: #ffffff2b;
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+          #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .checkbox .checkmark::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: #e3e3e3;
+    box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .checkbox input:checked + .checkmark {
+    background-color: #22cc3f;
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+          rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  }
+  
+  .checkbox input:checked + .checkmark::after {
+    background-color: white;
+  }
+  
+  .checkbox .label {
+    margin-right: 10px;
+    user-select: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #d8aa00;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+    background-color: #fefefe;
+    height: 100vh;
+    overflow-y: auto;
+    width: calc(100% - 270px);
+}
+
+/* Header with Spacing Adjustments */
+header {
+    background-color: #8b0000; /* Maroon color */
+    border-bottom: 1px solid #ccc;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.account {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Controls and Filters Section */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+.filters input {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filters input::placeholder {
+    color: #bbb;
+}
+
+.btn-search {
+    padding: 10px 20px;
+    background-color: #8b0000; /* Maroon color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Green Button */
+.btn-green {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead th {
+    padding: 12px;
+    background-color: #981105;
+    color: #fff;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.status.green {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.status.red {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjusting alignment in the table cells with buttons */
+.table-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the note input and Save Note button */
+}
+
+.note-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the note textarea and Save Note button */
+}
+
+.note-form textarea {
+    flex-grow: 1; /* Make textarea take available space */
+    margin-right: 10px;
+    resize: vertical; /* Allow resizing vertically */
+}
+
+.save-note-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+/* Styles for State Buttons */
+.btn-state {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+.btn-clear {
+    background-color: #28a745; /* Green for Clear */
+}
+.btn-signed {
+    background-color: #007bff; /* Blue for Signed */
+}
+.btn-pending {
+    background-color: #dc3545; /* Red for Pending */
+}
+
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.note-input {
+    margin-top: 5px;
+    width: 90%;
+    padding: 4px;
+    font-size: 0.9em;
+}
+th button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 2px;
+    font-size: 12px;
+}
+th button:hover {
+    color: #0056b3;
+}
+

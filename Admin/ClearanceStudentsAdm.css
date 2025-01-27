@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #000; /* Matches admin layout background */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #8b0000;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    background-color: #8b0000; /* Matches sidebar background */
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    background-color: #a52a2a; /* Slight glow effect */
+}
+
+/* Sidebar Bottom Section */
+.sidebar-bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sidebar-bottom p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.sidebar-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    background-color: white;
+}
+
+header h1 {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Filter Section */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filters input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.filters button {
+    padding: 10px 15px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filters button:hover {
+    background-color: #800000;
+}
+
+/* Table Styles */
+.students-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.students-table th,
+.students-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.students-table th {
+    background-color: #8b0000;
+    color: white;
+}
+
+.students-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Additional Alignments */
+.students-table tr:hover {
+    background-color: #e6e6e6;
+}
+
+.filters input,
+.filters button {
+    height: 40px; /* Ensure consistent height for inputs and buttons */
+}

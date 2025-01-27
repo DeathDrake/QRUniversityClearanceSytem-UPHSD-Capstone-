@@ -1,0 +1,32 @@
+<html>
+    <head>
+            
+    </head>
+    <body>
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+        <script>
+            async function fetchData() {
+                const count = await fetch('./Admin_count.php').then(req => req.json())
+                const total = count.signed + count.notSigned
+                const signedPercent = (count.signed / total) * 100
+                const notSignedPercent = (count.notSigned / total) * 100
+                const chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: [
+                            {y: signedPercent, label: "Signed"},
+                            {y: notSignedPercent, label: "Not Signed"}
+                        ]
+                    }]
+                });
+                chart.render();
+            }
+            fetchData()
+        </script>
+    </body>
+</html>

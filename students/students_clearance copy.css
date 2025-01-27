@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure body covers full viewport */
+    overflow: hidden; /* Prevent scrolling in the body */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #8b0000; /* Dark red for signatory theme */
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Allows sidebar scrolling */
+    z-index: 1000; /* Ensure the sidebar stays on top */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #a52a2a; /* Darker red for hover */
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Space for the fixed sidebar */
+    padding: 40px;
+    background-color: #fff;
+    height: 100vh; /* Ensure the content section takes the full height */
+    overflow-y: auto; /* Allow the main content to scroll */
+    width: calc(100% - 270px); /* Adjust width to avoid overflow */
+}
+
+/* Dashboard Header */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #8b0000;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a52a2a; /* Darker red */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
