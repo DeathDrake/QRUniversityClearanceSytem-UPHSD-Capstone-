@@ -1,0 +1,163 @@
+/* General page styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige background */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Navbar styling */
+.navbar, .bottom-navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #800000;
+    padding-left: 20px;
+    position: relative;
+    height: 80px;
+}
+
+/* Gold stripes for the navbar */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Position at the top of the navbar */
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thickness of the gold strip */
+    background-color: #ffd700; /* Gold color */
+}
+
+
+
+.bottom-navbar {
+    background-color: #202020;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+
+
+.bottom-navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Gold strip at the bottom */
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thickness of the gold strip */
+    background-color: #ffd700; /* Gold color */
+}
+
+/* Navbar icon */
+.navbar-icon {
+    height: 60px;
+    width: auto;
+}
+
+/* Login form container */
+.login-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100vh - 160px);
+}
+
+/* Login form styling */
+.login {
+    background: rgba(124, 0, 0, 0.85);
+    padding: 50px;
+    border-radius: 17px;
+    color: white;
+    max-width: 360px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+/* Input styles */
+.input-wrapper {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #800000;
+    font-size: 18px;
+}
+
+.input-wrapper input {
+    width: 80%;
+    padding: 15px 15px 15px 45px; /* Adjust padding for the icon */
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+}
+
+.input-wrapper input:focus {
+    background: #f5d0d0;
+}
+
+/* Submit button */
+.btn {
+    width: 50%; /* Reduced width by 50% */
+    padding: 10px;
+    margin: 30px auto; /* Center align the button */
+    display: block;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(144deg, #ffd900, #ffd900 50%, #ffd900);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(144deg, #007d02, #007d02 50%, #007d02);
+}
+
+/* Logo Header */
+.logo-header img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login {
+        padding: 20px;
+    }
+
+    .input-wrapper input {
+        font-size: 0.9rem;
+        padding: 10px 10px 10px 35px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        width: 70%; /* Slightly wider button for smaller screens */
+    }
+}

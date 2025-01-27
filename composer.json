@@ -1,0 +1,8 @@
+{
+    "name": "salag/master-thesis",
+    "type": "project",
+    "require": {
+        "chillerlan/php-qrcode": "^5.0",
+        "parsecsv/php-parsecsv": "^1.3"
+    }
+}
